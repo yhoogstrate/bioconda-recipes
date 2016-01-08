@@ -3,14 +3,12 @@ about:
   license: MPL2
   summary: "Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms."
 build:
-  number: 0
+  number: 1
 package:
   name: eigen3
   version: '3.2'
 requirements:
   build:
-  - cmake ==3.2.3
-  run:
   - cmake ==3.2.3
 source:
   fn: 3.2.6.tar.bz2
