@@ -1,0 +1,50 @@
+package:
+  name: perl-test-pod
+  version: "1.51"
+
+source:
+  fn: Test-Pod-1.51.tar.gz
+  url: https://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-Pod-1.51.tar.gz
+  md5: f806aa84de2f0c0fba48b3a5a8a4aecf
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-pod-simple
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-pod-simple
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Test::Pod
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://search.cpan.org/dist/Test-Pod/
+  license: perl_5
+  summary: 'check for POD errors in files'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

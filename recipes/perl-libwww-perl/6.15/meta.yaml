@@ -1,0 +1,69 @@
+package:
+  name: perl-libwww-perl
+  version: "6.15"
+
+source:
+  fn: libwww-perl-6.15.tar.gz
+  url: https://cpan.metacpan.org/authors/id/E/ET/ETHER/libwww-perl-6.15.tar.gz
+  md5: 6888c9d8728cd6f3ea3c9754461c9f94
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - perl
+    - perl-html-parser
+    - perl-uri
+    - perl-encode-locale
+    - perl-encode
+    - perl-getopt-long
+    - perl-http-daemon
+    - perl-net-http
+    - perl-http-date
+    - perl-mime-base64
+    - perl-test-simple
+    - perl-http-negotiate
+    - perl-extutils-makemaker
+    - perl-www-robotrules
+    - perl-http-message
+    - perl-libnet
+    - perl-digest-md5
+    - perl-lwp-mediatypes
+    - perl-io
+    - perl-http-cookies
+    - perl-file-listing
+
+  run:
+    - perl
+    - perl-http-negotiate
+    - perl-html-parser
+    - perl-uri
+    - perl-encode-locale
+    - perl-www-robotrules
+    - perl-net-http
+    - perl-http-message
+    - perl-encode
+    - perl-http-cookies
+    - perl-lwp-mediatypes
+    - perl-io
+    - perl-http-daemon
+    - perl-digest-md5
+    - perl-libnet
+    - perl-mime-base64
+    - perl-http-date
+    - perl-file-listing
+
+test:
+  # Perl 'use' tests
+  imports:
+    - LWP::UserAgent
+
+about:
+  home: http://metacpan.org/pod/libwww-perl
+  license: perl_5
+  summary: 'The World-Wide Web library for Perl'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
