@@ -18,9 +18,10 @@ source:
 requirements:
   build:
     - perl
-
+    - gcc
   run:
     - perl
+    - libgcc
 
 test:
   # Perl 'use' tests
