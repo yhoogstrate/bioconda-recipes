@@ -1,0 +1,25 @@
+package:
+  name: vina
+  version: "1.1.2"
+
+source:
+  fn: autodock-vina-07a6294a4a957527def41e67544bdbb504aaf50a.tgz
+  url: https://github.com/jandom/autodock-vina/archive/07a6294a4a957527def41e67544bdbb504aaf50a.tar.gz
+
+
+build:
+  number: 0
+  skip: False
+
+requirements:
+  build:
+    - boost <=1.59.0
+  run:
+    - boost <=1.59.0
+
+about:
+  license: "Apache"
+
+test:
+    commands:
+      - vina --help
