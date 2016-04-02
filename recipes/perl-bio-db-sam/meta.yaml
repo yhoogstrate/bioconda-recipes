@@ -11,13 +11,14 @@ build:
 
 requirements:
   build:
-    - gcc
+    - gcc   # [linux]
+    - llvm  # [osx]
     - perl-threaded
     - perl-app-cpanminus
     - perl-module-build
     - perl-bioperl
   run:
-    - libgcc
+    - libgcc  # [linux]
     - perl-threaded
     - perl-bioperl
 
