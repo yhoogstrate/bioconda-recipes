@@ -19,7 +19,7 @@ requirements:
     - perl-lwp-simple
     - perl-module-build
   run:
-    - libgcc  # [lnux]
+    - libgcc  # [linux]
     - perl-threaded
     - openssl
     - perl-lwp-simple
