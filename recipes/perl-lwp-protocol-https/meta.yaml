@@ -11,14 +11,15 @@ build:
 
 requirements:
   build:
-    - gcc
+    - gcc     # [linux]
+    - llvm    # [osx]
     - perl-threaded
     - openssl
     - perl-app-cpanminus
     - perl-lwp-simple
     - perl-module-build
   run:
-    - libgcc
+    - libgcc  # [lnux]
     - perl-threaded
     - openssl
     - perl-lwp-simple
