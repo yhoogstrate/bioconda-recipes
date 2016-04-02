@@ -9,4 +9,4 @@ cd ../c
 mkdir bin
 make OPTINC=-I$SRC_DIR/htslib-1.3 HTSLOC=$SRC_DIR/htslib-1.3
 mkdir -p $PREFIX/bin
-cp bin/* $PREFIX/bin
+cp bin/alleleCounter $PREFIX/bin
