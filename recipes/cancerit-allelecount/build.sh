@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eu
 
-wget -O https://github.com/samtools/htslib/releases/download/1.3/htslib-1.3.tar.bz2
+wget -O htslib-1.3.tar.bz2 https://github.com/samtools/htslib/releases/download/1.3/htslib-1.3.tar.bz2
 tar -xjvpf htslib-1.3.tar.bz2
 cd htslib-1.3
 make
