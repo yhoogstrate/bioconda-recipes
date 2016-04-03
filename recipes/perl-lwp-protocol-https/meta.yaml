@@ -18,11 +18,13 @@ requirements:
     - perl-app-cpanminus
     - perl-lwp-simple
     - perl-module-build
+    - perl-net-ssleay
   run:
     - libgcc  # [linux]
     - perl-threaded
     - openssl
     - perl-lwp-simple
+    - perl-net-ssleay
 
 test:
   imports:
