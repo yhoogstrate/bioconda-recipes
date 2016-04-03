@@ -13,11 +13,13 @@ requirements:
   build:
     - gcc   # [linux]
     - llvm  # [osx]
+    - samtools <1.0
     - perl-threaded
     - perl-app-cpanminus
     - perl-module-build
     - perl-bioperl
   run:
+    - samtools <1.0
     - libgcc  # [linux]
     - perl-threaded
     - perl-bioperl
