@@ -23,8 +23,8 @@ requirements:
       - star ==2.5.2b
       - bowtie2 ==2.3.0
       - blat ==35
-      - sra-tools
       - ucsc-liftover ==324
+      - sra-tools
       - bwa
       - pigz
 
