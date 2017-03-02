@@ -13,17 +13,15 @@ build:
 
 requirements:
   run:
-      - python # linux64 and osx
-      - setuptools
-      - numpy # [py27]
-      - biopython # [py27]
-      - xlrd # [py27]
-      - openpyxl # [py27]
+#      - seqtk-fork ==r82b << this needs to be in first 
+      - python
+      - numpy
+      - biopython
+      - xlrd
+      - openpyxl
       - bowtie ==1.2.0
       - star ==2.5.2b
       - bowtie2 ==2.3.0
-#      - seqtk-fork ==r82b << this needs to be in first 
-      - seqtk ==r82
       - blat ==35
       - sra-tools
       - ucsc-liftover ==324
