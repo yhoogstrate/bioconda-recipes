@@ -13,7 +13,7 @@ build:
 
 requirements:
   run:
-#      - seqtk-fork ==r82b << this needs to be in first 
+#      - seqtk-fork ==r82b  
       - python
       - numpy
       - biopython
