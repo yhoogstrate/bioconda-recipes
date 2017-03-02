@@ -5,7 +5,7 @@ package:
 source:
   fn: fusioncatcher_v0.99.7b.zip
   url: https://sourceforge.net/projects/fusioncatcher/files/fusioncatcher_v0.99.7b.zip
-  sha256: 
+  sha256: a062fa3b8069c943ccf78e2b2d27f0cc7fcd73b119592ce96c3320653f4ce24b
 
 build:
   number: 0
@@ -15,17 +15,18 @@ requirements:
   run:
       - python # linux64 and osx
       - setuptools
-      - python-numpy # [py27]
-      - ptyhon-biopython # [py27]
-      - python-xlrd # [py27]
-      - python-openpyxl # [py27]
-      - bowtie =1.2.0
-      - STAR =2.5.2b
-      - bowtie2 =2.2.9
-      - seqtk-fork =r82b
-      - blat =35
+      - numpy # [py27]
+      - biopython # [py27]
+      - xlrd # [py27]
+      - openpyxl # [py27]
+      - bowtie ==1.2.0
+      - star ==2.5.2b
+      - bowtie2 ==2.3.0
+#      - seqtk-fork ==r82b << this needs to be in first 
+      - seqtk ==r82
+      - blat ==35
       - sra-tools
-      - ucsc-liftOver
+      - ucsc-liftover ==324
       - bwa
       - pigz
 
@@ -39,8 +40,4 @@ about:
   license: GNU General Public License v3 or later (GPLv3+).
   summary: It searches for novel/known somatic fusion genes, translocations, and chimeras in RNA-seq data from diseased samples.
   
-extra:
-maintainers:
-- Daniel Nicorici
-doi:10.1101/011650
 
