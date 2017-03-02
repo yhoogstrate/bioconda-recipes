@@ -7,13 +7,17 @@ mkdir -p $PREFIX/data
 mkdir -p $PREFIX/test
 
 
-mv $(find . | grep configuration.cfg) $PREFIX/etc
+mv etc/* "$PREFIX/etc"
 mv bin/* "$PREFIX/bin"
+mv doc/* "$PREFIX/doc"
+mv test/* "$PREFIX/test"
+mv * "$PREFIX"
 
 ls -als $PREFIX/bin/*.py
 
 chmod +x $PREFIX/bin/*.py
 chmod +x $PREFIX/bin/*.sh
+chmod +x $PREFIX/test/*.sh
 
 sed -i.bak 's#/apps/fusioncatcher#'$PREFIX'#g' $PREFIX/etc/configuration.cfg
 
