@@ -13,8 +13,8 @@ source:
 
 requirements:
   build:
-    # TODO needs gcc >= 4.9 to build.
-    # - gcc
+    - libcxx # [osx]
+    - gcc ==4.8.5 # [linux]
     - cmake
     - zlib
     - bzip2
@@ -31,7 +31,8 @@ requirements:
   run:
     - zlib
     - bzip2
-    - libgcc
+    - libgcc # [linux]
+    - libcxx # [osx]
 
 test:
   commands:
