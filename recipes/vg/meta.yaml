@@ -1,0 +1,49 @@
+{% set version = "1.5.0" %}
+
+package:
+  name: vg
+  version: {{ version }}
+
+build:
+  number: 0
+
+source:
+  git_url: https://github.com/vgteam/vg.git
+  git_rev: v{{ version }}
+
+requirements:
+  build:
+    - libcxx # [osx]
+    - gcc ==4.8.5 # [linux]
+    - cmake
+    - zlib
+    - bzip2
+    - protobuf
+    - jansson
+    - bison
+    - flex
+    - rdflib
+    - unzip
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+  run:
+    - zlib
+    - bzip2
+    - libgcc # [linux]
+    - libcxx # [osx]
+
+test:
+  commands:
+    - vg --help
+
+about:
+  home: https://github.com/vgteam/vg
+  license: MIT
+  summary: Tools for working with genome variation graphs.
+
+extra:
+  skip-lints:
+    - missing_hash
+    - uses_git_url
